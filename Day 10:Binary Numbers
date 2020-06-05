@@ -1,0 +1,50 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+import java.lang.Iterable;
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+     static int count=0;
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        int remainder;
+        int maxcount=0;
+        scanner.close();
+        // String s=Integer.toBinaryString(n) ;
+        // for(int i : s){
+        //     if(i==1){
+        //         for(int j:s){
+        //             if(j==1){
+        //                 count++;
+        //             }
+        //             else{
+        //                 break;
+        //             }
+        //         }
+        //     }
+        // }
+        while(n!=0){
+            remainder=n%2;
+            n=n/2;
+            if(remainder==1){
+                count++;
+                if(count>=maxcount){
+                    maxcount=count;
+                }
+            }
+            else{
+                count=0;
+            
+            }
+        }
+        System.out.println(maxcount);
+    }
+}
