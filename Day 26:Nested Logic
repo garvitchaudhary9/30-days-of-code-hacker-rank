@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int dd1=0,dd2=0,mm1=0,mm2=0,yyyy1=0,yyyy2=0;
+        Scanner sc= new Scanner (System.in);
+        dd1=sc.nextInt();
+        mm1=sc.nextInt();
+        yyyy1=sc.nextInt();
+        dd2=sc.nextInt();
+        mm2=sc.nextInt();
+        yyyy2=sc.nextInt();
+        int hackos=0;
+        if(yyyy1!=yyyy2&&yyyy1>yyyy2){
+            hackos=10000;
+        }
+        if(yyyy1==yyyy2&&mm1!=mm2&&mm1>mm2){
+            hackos=500*(mm1-mm2);
+        }
+        if(yyyy1==yyyy2&&mm1==mm2&&dd1!=dd2&&dd1>dd2){
+            hackos=15*(dd1-dd2);
+        }
+        System.out.println(hackos);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
